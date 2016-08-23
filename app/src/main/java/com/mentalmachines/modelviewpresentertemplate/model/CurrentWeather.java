@@ -3,6 +3,8 @@ package com.mentalmachines.modelviewpresentertemplate.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import rx.Scheduler;
+
 /**
  * Created by CaptofOuterSpace on 8/22/2016.
  */
@@ -18,6 +20,7 @@ public class CurrentWeather {
     public Integer id;
     public String name;
     public Integer cod;
+
 
     public class Clouds {
         public Integer all;

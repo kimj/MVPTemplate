@@ -27,4 +27,6 @@ dependencies {
     compile 'com.squareup.moshi:moshi:1.2.0'
     compile group: 'com.squareup.retrofit2', name: 'converter-moshi', version: '2.0.0-beta3'
     compile 'com.jakewharton:butterknife:8.2.1'
+    compile 'io.reactivex:rxjava:1.1.9'
+    compile 'io.reactivex:rxandroid:1.2.1'
 }

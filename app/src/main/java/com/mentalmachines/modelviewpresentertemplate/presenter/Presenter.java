@@ -25,7 +25,7 @@ public class Presenter {
 
     public void getCurrentWeather(){
             mOpenWeatherMapService.getOpenWeatherMapApi()
-                    .getCurrentWeather(42.36f, -71.06f, "imperial")
+                    .getCurrentWeather("Boston,US", "imperial")
                     .subscribeOn(Schedulers.newThread())
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(new Observer<CurrentWeather>() {

@@ -12,23 +12,30 @@ import rx.Observable;
  * Created by CaptofOuterSpace on 8/22/2016.
  */
 public class OpenWeatherMapBuilder {
-
-    String API_KEY = "e85d4199f4ca399a2dce7c98fc1f0648";
+    static String API = "http://api.openweathermap.org/data/2.5/";
+    static String API_KEY = "e85d4199f4ca399a2dce7c98fc1f0648";
+    // http://api.openweathermap.org/data/2.5/weather?q=Boston,US&appid=e85d4199f4ca399a2dce7c98fc1f0648
+    // lon=-71.06,lat=42.36
 
     OpenWeatherMapApi mOpenWeatherMapApi;
 
-    public static interface OpenWeatherMapApi{
-        @GET("/data/2.5/weather")
-        public Observable<CurrentWeather> getCurrentWeather(@Query("lat") float lat, @Query("lon") float lon, @Query("units") String units);
+    public interface OpenWeatherMapApi{
+/*        @GET("weather/appid=e85d4199f4ca399a2dce7c98fc1f0648")
+        Observable<CurrentWeather> getCurrentWeather(@Query("lat") float lat,
+                                                     @Query("lon") float lon,
+                                                     @Query("units") String units);*/
+
+        @GET("weather/appid=e85d4199f4ca399a2dce7c98fc1f0648")
+        Observable<CurrentWeather> getCurrentWeather(@Query("q") String q,
+                                                     @Query("units") String units);
     }
-    // http://api.openweathermap.org/data/2.5/weather?q=Boston,US&appid=e85d4199f4ca399a2dce7c98fc1f0648
 
     public OpenWeatherMapApi getOpenWeatherMapApi(){
         return mOpenWeatherMapApi;
     }
 
     public static OpenWeatherMapApi build(){
-        String API = "http://api.openweathermap.org/data/2.5/";
+
         Moshi moshi = new Moshi.Builder().build();
 
         Retrofit retrofit = new Retrofit.Builder()

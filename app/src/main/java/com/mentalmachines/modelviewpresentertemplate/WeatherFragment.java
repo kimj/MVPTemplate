@@ -25,6 +25,12 @@ public class WeatherFragment extends Fragment implements Presenter.View{
     OpenWeatherMapBuilder mOpenWeatherMapBuilder;
 
     @BindView(R.id.title) TextView title;
+    @BindView(R.id.textViewLocation) TextView textViewLocation;
+    @BindView(R.id.textViewWeatherDescription) TextView textViewWeatherDescription;
+    @BindView(R.id.textViewWeatherWind) TextView textViewWeatherWind;
+    @BindView(R.id.textViewWeatherTemperature) TextView textViewWeatherTemperature;
+    @BindView(R.id.textViewWeatherPressure) TextView textViewWeatherPressure;
+    @BindView(R.id.textViewWeatherHumidity) TextView textViewWeatherHumidity;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -54,6 +60,13 @@ public class WeatherFragment extends Fragment implements Presenter.View{
 
     @Override
     public void updateCurrentWeatherViews(CurrentWeather currentWeather){
+        textViewLocation.setText(currentWeather.name +
+                currentWeather.sys.country + "(" +
+                currentWeather.coord.lat + "," + currentWeather.coord.lon + ")");
+        textViewWeatherDescription.setText(currentWeather.weather.get(0).description);
+        textViewWeatherTemperature.setText(currentWeather.);
+        textViewWeatherPressure.setText(currentWeather.main.pressure);
+        textViewWeatherHumidity.setText(currentWeather.main.humidity);
 
     }
 }

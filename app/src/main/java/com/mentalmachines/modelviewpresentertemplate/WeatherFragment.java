@@ -36,6 +36,7 @@ public class WeatherFragment extends Fragment implements Presenter.View{
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        mOpenWeatherMapBuilder = new OpenWeatherMapBuilder();
         mPresenter = new Presenter(this, mOpenWeatherMapBuilder);
         mPresenter.getCurrentWeather();
     }
@@ -64,9 +65,9 @@ public class WeatherFragment extends Fragment implements Presenter.View{
                 currentWeather.sys.country + "(" +
                 currentWeather.coord.lat + "," + currentWeather.coord.lon + ")");
         textViewWeatherDescription.setText(currentWeather.weather.get(0).description);
-        textViewWeatherTemperature.setText(currentWeather.);
+        textViewWeatherTemperature.setText(currentWeather.main.tempMax + "/" + currentWeather.main.tempMin);
         textViewWeatherPressure.setText(currentWeather.main.pressure);
         textViewWeatherHumidity.setText(currentWeather.main.humidity);
-
+        textViewWeatherWind.setText(currentWeather.wind.deg + " deg " + currentWeather.wind.speed);
     }
 }

@@ -6,7 +6,9 @@ import com.mentalmachines.modelviewpresentertemplate.WeatherFragment;
 import com.mentalmachines.modelviewpresentertemplate.model.CurrentWeather;
 import com.mentalmachines.modelviewpresentertemplate.model.OpenWeatherMapBuilder;
 
+import rx.Observable;
 import rx.Observer;
+import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
@@ -24,7 +26,24 @@ public class Presenter {
     }
 
     public void getCurrentWeather(){
-            mOpenWeatherMapService.getOpenWeatherMapApi()
+        Observable<CurrentWeather> call = mOpenWeatherMapService.getOpenWeatherMapApi()
+                .getCurrentWeather("Boston,US", "imperial");
+        Subscription subscription = call
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<CurrentWeather>() {
+                    @Override
+                    public void onCompleted() {}
+
+                    @Override
+                    public void onError(Throwable e) {}
+
+                    @Override
+                    public void onNext(CurrentWeather currentWeather) {
+                        mView.updateCurrentWeatherViews(currentWeather);
+                    }
+                });
+            /*mOpenWeatherMapService.getOpenWeatherMapApi()
                     .getCurrentWeather("Boston,US", "imperial")
                     .subscribeOn(Schedulers.newThread())
                     .observeOn(AndroidSchedulers.mainThread())
@@ -39,7 +58,7 @@ public class Presenter {
                         public void onNext(CurrentWeather currentWeather) {
                             mView.updateCurrentWeatherViews(currentWeather);
                         }
-                    });
+                    });*/
         }
 
 

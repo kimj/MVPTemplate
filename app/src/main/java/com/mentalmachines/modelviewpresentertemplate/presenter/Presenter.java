@@ -2,6 +2,7 @@ package com.mentalmachines.modelviewpresentertemplate.presenter;
 
 import android.view.View;
 
+import com.mentalmachines.modelviewpresentertemplate.PresenterInterface;
 import com.mentalmachines.modelviewpresentertemplate.WeatherFragment;
 import com.mentalmachines.modelviewpresentertemplate.model.CurrentWeather;
 import com.mentalmachines.modelviewpresentertemplate.model.OpenWeatherMapBuilder;
@@ -15,7 +16,7 @@ import rx.schedulers.Schedulers;
 /**
  * Created by CaptofOuterSpace on 8/22/2016.
  */
-public class Presenter {
+public class Presenter implements PresenterInterface {
     CurrentWeather mCurrentWeather;
     WeatherFragment mView;
     OpenWeatherMapBuilder mOpenWeatherMapService;

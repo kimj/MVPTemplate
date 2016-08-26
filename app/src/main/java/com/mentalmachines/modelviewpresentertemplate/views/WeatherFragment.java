@@ -1,4 +1,4 @@
-package com.mentalmachines.modelviewpresentertemplate;
+package com.mentalmachines.modelviewpresentertemplate.views;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,13 +8,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.mentalmachines.modelviewpresentertemplate.R;
 import com.mentalmachines.modelviewpresentertemplate.model.CurrentWeather;
-import com.mentalmachines.modelviewpresentertemplate.model.OpenWeatherMapBuilder;
+import com.mentalmachines.modelviewpresentertemplate.OpenWeatherMapBuilder;
 import com.mentalmachines.modelviewpresentertemplate.presenter.Presenter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import okhttp3.Response;
 
 /**
  * Created by CaptofOuterSpace on 8/22/2016.

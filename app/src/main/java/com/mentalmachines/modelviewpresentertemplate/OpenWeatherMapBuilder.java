@@ -1,5 +1,6 @@
-package com.mentalmachines.modelviewpresentertemplate.model;
+package com.mentalmachines.modelviewpresentertemplate;
 
+import com.mentalmachines.modelviewpresentertemplate.model.CurrentWeather;
 import com.squareup.moshi.Moshi;
 
 import retrofit2.MoshiConverterFactory;
@@ -15,8 +16,6 @@ import rx.Observable;
 public class OpenWeatherMapBuilder {
     static String API = "http://api.openweathermap.org/data/2.5/";
     static String API_KEY = "e85d4199f4ca399a2dce7c98fc1f0648";
-    // http://api.openweathermap.org/data/2.5/weather?q=Boston,US&appid=e85d4199f4ca399a2dce7c98fc1f0648
-    // lon=-71.06,lat=42.36
 
     OpenWeatherMapApi mOpenWeatherMapApi;
 

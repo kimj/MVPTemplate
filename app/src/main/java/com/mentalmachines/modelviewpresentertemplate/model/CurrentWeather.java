@@ -22,41 +22,15 @@ public class CurrentWeather {
     public Integer cod;
 
 
-    public class Clouds {
-        public Integer all;
-    }
 
-    public class Coord {
-        public Double lon;
-        public Double lat;
-    }
 
-    public class Main {
-        public Double temp;
-        public Integer pressure;
-        public Integer humidity;
-        public Double tempMin;
-        public Double tempMax;
-    }
 
-    public class Sys {
-        public Integer type;
-        public Integer id;
-        public Double message;
-        public String country;
-        public Integer sunrise;
-        public Integer sunset;
-    }
 
-    public class Weather {
-        public Integer id;
-        public String main;
-        public String description;
-        public String icon;
-    }
 
-    public class Wind {
-        public Double speed;
-        public Integer deg;
-    }
+
+
+
+
+
+
 }

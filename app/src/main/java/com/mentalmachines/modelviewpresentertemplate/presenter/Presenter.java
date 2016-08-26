@@ -1,11 +1,9 @@
 package com.mentalmachines.modelviewpresentertemplate.presenter;
 
-import android.view.View;
-
 import com.mentalmachines.modelviewpresentertemplate.PresenterInterface;
-import com.mentalmachines.modelviewpresentertemplate.WeatherFragment;
+import com.mentalmachines.modelviewpresentertemplate.views.WeatherFragment;
 import com.mentalmachines.modelviewpresentertemplate.model.CurrentWeather;
-import com.mentalmachines.modelviewpresentertemplate.model.OpenWeatherMapBuilder;
+import com.mentalmachines.modelviewpresentertemplate.OpenWeatherMapBuilder;
 
 import rx.Observable;
 import rx.Observer;
@@ -27,9 +25,8 @@ public class Presenter implements PresenterInterface {
     }
 
     public void getCurrentWeather(){
-        Observable<CurrentWeather> call = mOpenWeatherMapService.getOpenWeatherMapApi()
-                .getCurrentWeather("Boston,US", "imperial");
-        Subscription subscription = call
+        mOpenWeatherMapService.getOpenWeatherMapApi()
+                .getCurrentWeather("Boston,US", "imperial")
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Observer<CurrentWeather>() {
@@ -44,22 +41,6 @@ public class Presenter implements PresenterInterface {
                         mView.updateCurrentWeatherViews(currentWeather);
                     }
                 });
-            /*mOpenWeatherMapService.getOpenWeatherMapApi()
-                    .getCurrentWeather("Boston,US", "imperial")
-                    .subscribeOn(Schedulers.newThread())
-                    .observeOn(AndroidSchedulers.mainThread())
-                    .subscribe(new Observer<CurrentWeather>() {
-                        @Override
-                        public void onCompleted() {}
-
-                        @Override
-                        public void onError(Throwable e) {}
-
-                        @Override
-                        public void onNext(CurrentWeather currentWeather) {
-                            mView.updateCurrentWeatherViews(currentWeather);
-                        }
-                    });*/
         }
 
 

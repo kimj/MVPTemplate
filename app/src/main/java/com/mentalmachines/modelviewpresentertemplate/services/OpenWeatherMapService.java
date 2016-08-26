@@ -1,4 +1,4 @@
-package com.mentalmachines.modelviewpresentertemplate;
+package com.mentalmachines.modelviewpresentertemplate.services;
 
 import com.mentalmachines.modelviewpresentertemplate.model.CurrentWeather;
 import com.squareup.moshi.Moshi;
@@ -13,7 +13,7 @@ import rx.Observable;
 /**
  * Created by CaptofOuterSpace on 8/22/2016.
  */
-public class OpenWeatherMapBuilder {
+public class OpenWeatherMapService {
     static String API = "http://api.openweathermap.org/data/2.5/";
     static String API_KEY = "e85d4199f4ca399a2dce7c98fc1f0648";
 
@@ -29,7 +29,7 @@ public class OpenWeatherMapBuilder {
         return mOpenWeatherMapApi;
     }
 
-    public OpenWeatherMapBuilder(){
+    public OpenWeatherMapService(){
         Moshi moshi = new Moshi.Builder().build();
         RxJavaCallAdapterFactory rxAdapter = RxJavaCallAdapterFactory.create();
 

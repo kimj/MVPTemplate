@@ -1,13 +1,10 @@
 package com.mentalmachines.modelviewpresentertemplate.presenter;
 
-import com.mentalmachines.modelviewpresentertemplate.PresenterInterface;
 import com.mentalmachines.modelviewpresentertemplate.views.WeatherFragment;
 import com.mentalmachines.modelviewpresentertemplate.model.CurrentWeather;
-import com.mentalmachines.modelviewpresentertemplate.OpenWeatherMapBuilder;
+import com.mentalmachines.modelviewpresentertemplate.services.OpenWeatherMapService;
 
-import rx.Observable;
 import rx.Observer;
-import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
@@ -17,9 +14,9 @@ import rx.schedulers.Schedulers;
 public class Presenter implements PresenterInterface {
     CurrentWeather mCurrentWeather;
     WeatherFragment mView;
-    OpenWeatherMapBuilder mOpenWeatherMapService;
+    OpenWeatherMapService mOpenWeatherMapService;
 
-    public Presenter(WeatherFragment weatherFragment, OpenWeatherMapBuilder openWeatherMapBuilder) {
+    public Presenter(WeatherFragment weatherFragment, OpenWeatherMapService openWeatherMapBuilder) {
         mView = weatherFragment;
         mOpenWeatherMapService = openWeatherMapBuilder;
     }

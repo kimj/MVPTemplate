@@ -36,8 +36,7 @@ public class WeatherFragment extends Fragment implements Presenter.View{
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mOpenWeatherMapBuilder = new OpenWeatherMapService();
-        mPresenter = new Presenter(this, mOpenWeatherMapBuilder);
+        mPresenter = new Presenter(this);
         mPresenter.getCurrentWeather();
     }
 

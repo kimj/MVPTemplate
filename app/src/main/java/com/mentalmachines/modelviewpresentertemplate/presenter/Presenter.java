@@ -12,13 +12,12 @@ import rx.schedulers.Schedulers;
  * Created by CaptofOuterSpace on 8/22/2016.
  */
 public class Presenter implements PresenterInterface {
-    CurrentWeather mCurrentWeather;
     WeatherFragment mView;
     OpenWeatherMapService mOpenWeatherMapService;
 
-    public Presenter(WeatherFragment weatherFragment, OpenWeatherMapService openWeatherMapBuilder) {
+    public Presenter(WeatherFragment weatherFragment) {
         mView = weatherFragment;
-        mOpenWeatherMapService = openWeatherMapBuilder;
+        mOpenWeatherMapService = new OpenWeatherMapService();
     }
 
     public void getCurrentWeather(){

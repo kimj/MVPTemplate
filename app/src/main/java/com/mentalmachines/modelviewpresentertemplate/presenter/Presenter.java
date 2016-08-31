@@ -1,9 +1,12 @@
 package com.mentalmachines.modelviewpresentertemplate.presenter;
 
+import android.util.Log;
+
 import com.mentalmachines.modelviewpresentertemplate.views.WeatherFragment;
 import com.mentalmachines.modelviewpresentertemplate.model.CurrentWeather;
 import com.mentalmachines.modelviewpresentertemplate.services.OpenWeatherMapService;
 
+import retrofit2.adapter.rxjava.HttpException;
 import rx.Observer;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
@@ -30,7 +33,14 @@ public class Presenter implements PresenterInterface {
                     public void onCompleted() {}
 
                     @Override
-                    public void onError(Throwable e) {}
+                    public void onError(Throwable e) {
+                        if (e instanceof HttpException) {
+                            HttpException response = (HttpException)e;
+                            int code = response.code();
+                        } else {
+                            Log.i("MVPTemplate", e.toString());
+                        }
+                    }
 
                     @Override
                     public void onNext(CurrentWeather currentWeather) {

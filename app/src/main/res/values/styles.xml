@@ -6,9 +6,16 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+<!--        <item name="colorPrimary">#3F51B5</item>
+        &lt;!&ndash; Light Indigo &ndash;&gt;
+        <item name="colorPrimaryDark">#3949AB</item>
+        &lt;!&ndash; Dark Indigo &ndash;&gt;
+        <item name="colorAccent">#00B0FF</item>-->
+
     </style>
 
-    <style name="AppTheme.Card.Margins" parent="CardView">
+<!--    <style name="AppTheme.Card.Margins" parent="CardView">
         <item name="android:layout_marginTop">@dimen/margin_normal</item>
         <item name="android:layout_marginBottom">@dimen/margin_normal</item>
         <item name="android:layout_marginLeft">@dimen/margin_large</item>
@@ -19,6 +26,6 @@
         <item name="cardCornerRadius">@dimen/margin_small</item>
         <item name="cardPreventCornerOverlap">false</item>
         <item name="cardBackgroundColor">@android:color/white</item>
-    </style>
+    </style>-->
 
 </resources>

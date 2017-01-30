@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 import com.mentalmachines.modelviewpresentertemplate.R;
 import com.mentalmachines.modelviewpresentertemplate.model.CurrentWeather;
-import com.mentalmachines.modelviewpresentertemplate.services.OpenWeatherMapService;
 import com.mentalmachines.modelviewpresentertemplate.presenter.Presenter;
 
 import butterknife.BindView;
@@ -22,9 +21,7 @@ import butterknife.ButterKnife;
 public class WeatherFragment extends Fragment implements Presenter.View{
     public static String TAG = "WeatherFragment";
     Presenter mPresenter;
-    OpenWeatherMapService mOpenWeatherMapBuilder;
 
-    @BindView(R.id.title) TextView title;
     @BindView(R.id.textViewLocation) TextView textViewLocation;
     @BindView(R.id.textViewWeatherDescription) TextView textViewWeatherDescription;
     @BindView(R.id.textViewWeatherWind) TextView textViewWeatherWind;

@@ -9,10 +9,15 @@ import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.mentalmachines.modelviewpresentertemplate.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     FloatingActionButton fab;
@@ -20,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
     DrawerLayout navigationDrawer;
     ActionBarDrawerToggle drawerToggle;
     ListView drawerList;
+    String mTitle, mDrawerTitle;
+    Toolbar toolbar;
+    ArrayList<String> mPlanetTitles;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         // this.realm = RealmController.with(this).getRealm();
 
         //set toolbar
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         navigationDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -49,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         drawerToggle = new ActionBarDrawerToggle(
                 this,                  /* host Activity */
                 navigationDrawer,         /* DrawerLayout object */
-                R.drawable.ic_drawer,  /* nav drawer icon to replace 'Up' caret */
+                toolbar,  /* nav drawer icon to replace 'Up' caret */
                 R.string.drawer_open,  /* "open drawer" description */
                 R.string.drawer_close  /* "close drawer" description */
         ) {
@@ -103,6 +111,13 @@ public class MainActivity extends AppCompatActivity {
         // Handle your other action bar items...
 
         return super.onOptionsItemSelected(item);
+    }
+
+    class DrawerItemClickListener implements ListView.OnItemClickListener{
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+        }
     }
 
 }

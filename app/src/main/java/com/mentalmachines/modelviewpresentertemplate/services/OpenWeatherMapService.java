@@ -1,6 +1,5 @@
 package com.mentalmachines.modelviewpresentertemplate.services;
 
-import com.mentalmachines.modelviewpresentertemplate.model.CurrentWeather;
 import com.squareup.moshi.Moshi;
 
 import retrofit2.MoshiConverterFactory;

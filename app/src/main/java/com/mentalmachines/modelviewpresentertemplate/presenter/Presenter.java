@@ -3,7 +3,6 @@ package com.mentalmachines.modelviewpresentertemplate.presenter;
 import android.util.Log;
 
 import com.mentalmachines.modelviewpresentertemplate.views.WeatherFragment;
-import com.mentalmachines.modelviewpresentertemplate.model.CurrentWeather;
 import com.mentalmachines.modelviewpresentertemplate.services.OpenWeatherMapService;
 
 import retrofit2.adapter.rxjava.HttpException;
@@ -23,7 +22,7 @@ public class Presenter implements PresenterInterface {
         mOpenWeatherMapService = new OpenWeatherMapService();
     }
 
-    public void getCurrentWeather(){
+    public void getCurrentWeather(Location){
         mOpenWeatherMapService.getOpenWeatherMapApi()
                 .getCurrentWeather("Boston,US", "imperial")
                 .subscribeOn(Schedulers.newThread())

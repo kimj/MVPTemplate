@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.mentalmachines.modelviewpresentertemplate.R;
-import com.mentalmachines.modelviewpresentertemplate.model.CurrentWeather;
 import com.mentalmachines.modelviewpresentertemplate.presenter.Presenter;
 
 import butterknife.BindView;

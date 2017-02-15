@@ -23,21 +23,4 @@ public class OpenWeatherMapService {
         Observable<CurrentWeather> getCurrentWeather(@Query("q") String q,
                                                      @Query("units") String units);
     }
-
-    public OpenWeatherMapApi getOpenWeatherMapApi(){
-        return mOpenWeatherMapApi;
-    }
-
-    public OpenWeatherMapService(){
-        Moshi moshi = new Moshi.Builder().build();
-        RxJavaCallAdapterFactory rxAdapter = RxJavaCallAdapterFactory.create();
-
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(API)
-                .addCallAdapterFactory(rxAdapter)
-                .addConverterFactory(MoshiConverterFactory.create(moshi))
-                .build();
-
-        mOpenWeatherMapApi = retrofit.create(OpenWeatherMapApi.class);
-    }
 }

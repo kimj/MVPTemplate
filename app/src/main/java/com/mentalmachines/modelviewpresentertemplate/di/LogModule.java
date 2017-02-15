@@ -5,4 +5,6 @@ package com.mentalmachines.modelviewpresentertemplate.di;
  */
 
 public class LogModule {
+
+
 }

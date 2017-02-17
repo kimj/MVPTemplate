@@ -24,7 +24,7 @@ import com.mentalmachines.modelviewpresentertemplate.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
     FloatingActionButton fab;
     RecyclerView recycler;
     DrawerLayout navigationDrawer;

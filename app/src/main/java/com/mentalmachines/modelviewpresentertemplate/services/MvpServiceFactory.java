@@ -16,7 +16,7 @@ import timber.log.Timber;
  */
 
 public class MvpServiceFactory {
-    private static MvpServiceFactory makeMvpStarterService() {
+    public static MvpServiceFactory makeMvpStarterService() {
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(BuildConfig.BASE_API_URL)
                 .client(makeOkHttpClient())

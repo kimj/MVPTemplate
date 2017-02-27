@@ -1,4 +1,4 @@
-package com.mentalmachines.modelviewpresentertemplate.views;
+package com.mentalmachines.modelviewpresentertemplate.views.base;
 
 import android.support.v4.app.Fragment;
 

@@ -1,16 +1,14 @@
-package com.mentalmachines.modelviewpresentertemplate.di;
+package com.mentalmachines.modelviewpresentertemplate.di.module;
 
 import android.app.Application;
 import android.content.Context;
-
-import com.mentalmachines.modelviewpresentertemplate.services.MvpServiceFactory;
 
 import javax.inject.Singleton;
 
 import dagger.Provides;
 
 /**
- * Created by jkim11 on 1/31/17.
+ * Created by jkim11 on 2/24/17.
  */
 
 public class ApplicationModule {
@@ -33,7 +31,7 @@ public class ApplicationModule {
 
     @Provides
     @Singleton
-    static MvpServiceFactory provideMvpStarterService() {
-        return MvpServiceFactory.makeMvpStarterService();
+    static MvpStarterService provideMvpStarterService() {
+        return MvpStarterServiceFactory.makeStarterService();
     }
 }

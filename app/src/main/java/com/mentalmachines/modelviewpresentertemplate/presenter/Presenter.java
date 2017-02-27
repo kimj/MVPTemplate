@@ -1,5 +1,6 @@
 package com.mentalmachines.modelviewpresentertemplate.presenter;
 
+import android.location.Location;
 import android.util.Log;
 
 import com.mentalmachines.modelviewpresentertemplate.views.WeatherFragment;
@@ -22,34 +23,14 @@ public class Presenter implements PresenterInterface {
         mOpenWeatherMapService = new OpenWeatherMapService();
     }
 
-    public void getCurrentWeather(Location){
+    public void getCurrentWeather(Location location){
         mOpenWeatherMapService.getOpenWeatherMapApi()
                 .getCurrentWeather("Boston,US", "imperial")
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Observer<CurrentWeather>() {
-                    @Override
-                    public void onCompleted() {}
-
-                    @Override
-                    public void onError(Throwable e) {
-                        if (e instanceof HttpException) {
-                            HttpException response = (HttpException)e;
-                            int code = response.code();
-                        } else {
-                            Log.i("MVPTemplate", e.toString());
-                        }
-                    }
-
-                    @Override
-                    public void onNext(CurrentWeather currentWeather) {
-                        mView.updateCurrentWeatherViews(currentWeather);
-                    }
-                });
+                .subscribe(currentWeather -> mView.updateCurrentWeatherViews(currentWeather)});
         }
 
 
-    public interface View {
-        void updateCurrentWeatherViews(CurrentWeather currentWeather);
-    }
+
 }

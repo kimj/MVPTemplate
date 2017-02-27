@@ -1,5 +1,6 @@
 package com.mentalmachines.modelviewpresentertemplate.services;
 
+import com.mentalmachines.modelviewpresentertemplate.model.Model;
 import com.squareup.moshi.Moshi;
 
 import retrofit2.MoshiConverterFactory;
@@ -20,7 +21,7 @@ public class OpenWeatherMapService {
 
     public interface OpenWeatherMapApi{
         @GET("weather/appid=e85d4199f4ca399a2dce7c98fc1f0648")
-        Observable<CurrentWeather> getCurrentWeather(@Query("q") String q,
-                                                     @Query("units") String units);
+        Observable<Model> getCurrentWeather(@Query("q") String q,
+                                            @Query("units") String units);
     }
 }

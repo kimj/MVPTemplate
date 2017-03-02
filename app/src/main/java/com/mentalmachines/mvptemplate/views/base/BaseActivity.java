@@ -1,7 +1,10 @@
-package com.mentalmachines.modelviewpresentertemplate.views.base;
+package com.mentalmachines.mvptemplate.views.base;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+
+import com.mentalmachines.mvptemplate.di.component.ActivityComponent;
+import com.mentalmachines.mvptemplate.di.module.ActivityModule;
 
 import butterknife.ButterKnife;
 import timber.log.Timber;
@@ -19,6 +22,8 @@ public class BaseActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(getLayout());
         ButterKnife.bind(this);
+
+
         // Create the ActivityComponent and reuses cached ConfigPersistentComponent if this is
         // being called after a configuration change.
         mActivityId = savedInstanceState != null ?

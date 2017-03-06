@@ -18,7 +18,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.mentalmachines.mvptemplate.R;
 import com.mentalmachines.mvptemplate.views.base.BaseActivity;
 
 import java.util.ArrayList;

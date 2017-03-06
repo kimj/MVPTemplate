@@ -6,6 +6,7 @@ import android.content.Context;
 import com.facebook.stetho.Stetho;
 import com.mentalmachines.mvptemplate.di.component.ApplicationComponent;
 import com.mentalmachines.mvptemplate.di.module.ApplicationModule;
+import com.squareup.leakcanary.LeakCanary;
 
 import timber.log.Timber;
 
@@ -27,6 +28,7 @@ public class MVPTemplateApplication extends Application{
         if (BuildConfig.DEBUG) {
             Timber.plant(new Timber.DebugTree());
             Stetho.initializeWithDefaults(this);
+            LeakCanary.install(this);
         }
     }
 

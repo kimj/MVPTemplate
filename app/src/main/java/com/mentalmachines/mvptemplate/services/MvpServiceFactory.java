@@ -23,7 +23,7 @@ public class MvpServiceFactory {
                 .addConverterFactory(MoshiConverterFactory.create(makeMoshi()))
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build();
-        return retrofit.create(OpenWeatherMapService.OpenWeatherMapApi.class);
+        return retrofit.create(OpenWeatherMapApi.class);
     }
 
     private static OkHttpClient makeOkHttpClient() {

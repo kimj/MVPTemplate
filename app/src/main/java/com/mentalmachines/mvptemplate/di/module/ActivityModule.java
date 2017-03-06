@@ -25,7 +25,6 @@ public class ActivityModule {
     }
 
     @Provides
-    @ActivityContext
     Context providesContext() {
         return mActivity;
     }

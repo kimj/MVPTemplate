@@ -16,6 +16,7 @@ import android.widget.ProgressBar;
 
 import com.mentalmachines.mvptemplate.R;
 import com.mentalmachines.mvptemplate.views.base.BaseActivity;
+import com.mentalmachines.mvptemplate.views.common.ErrorView;
 
 import javax.inject.Inject;
 

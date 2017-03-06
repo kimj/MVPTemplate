@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
+import com.mentalmachines.mvptemplate.MVPTemplateApplication;
 import com.mentalmachines.mvptemplate.di.component.ActivityComponent;
 import com.mentalmachines.mvptemplate.di.component.ConfigPersistentComponent;
 import com.mentalmachines.mvptemplate.di.module.ActivityModule;
@@ -40,7 +41,7 @@ public abstract class BaseActivity extends AppCompatActivity{
         if (sComponentsArray.get(mActivityId) == null) {
             Timber.i("Creating new ConfigPersistentComponent id=%d", mActivityId);
             configPersistentComponent = DaggerConfigPersistentComponent.builder()
-                    .applicationComponent(MvpTemplateApplication.get(this).getComponent())
+                    .applicationComponent(MVPTemplateApplication.get(this).getComponent())
                     .build();
             sComponentsArray.put(mActivityId, configPersistentComponent);
         } else {

@@ -1,6 +1,5 @@
 package com.mentalmachines.mvptemplate.di.component;
 
-
 import com.mentalmachines.mvptemplate.di.module.ActivityModule;
 import com.mentalmachines.mvptemplate.views.MainActivity;
 import com.mentalmachines.mvptemplate.views.base.BaseActivity;

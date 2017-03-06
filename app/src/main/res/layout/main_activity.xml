@@ -53,7 +53,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            app:backgroundTint="@color/colorAccent"
+            app:backgroundTint="@color/theme_primary_accent"
             android:src="@drawable/ic_add_white_24dp"
             app:elevation="4dp"
             app:layout_anchor="@+id/recycler"

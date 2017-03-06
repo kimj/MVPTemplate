@@ -3,6 +3,8 @@ package com.mentalmachines.mvptemplate.di.module;
 import android.app.Activity;
 import android.content.Context;
 
+import com.mentalmachines.mvptemplate.di.ActivityContext;
+
 import dagger.Module;
 import dagger.Provides;
 

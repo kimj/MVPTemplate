@@ -32,9 +32,22 @@ proguard/
 # Android Studio captures folder
 captures/
 
+# Eclipse Metadata
+.metadata/
+
+# Mac OS X clutter
+*.DS_Store
+
+# Intellij IDEA (see https://intellij-support.jetbrains.com/entries/23393067)
+/.idea/*
+
 # Intellij
 *.iml
 .idea/workspace.xml
 
 # Keystore files
 *.jks
+
+# No IML please! (Why did I have to include every single one?  Oh well :[)
+/*.iml
+/app/*.iml

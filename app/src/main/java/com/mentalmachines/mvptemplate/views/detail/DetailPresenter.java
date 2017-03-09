@@ -1,5 +1,7 @@
 package com.mentalmachines.mvptemplate.views.detail;
 
+import com.mentalmachines.mvptemplate.di.ConfigPersistent;
+import com.mentalmachines.mvptemplate.model.DataManager;
 import com.mentalmachines.mvptemplate.presenter.BasePresenter;
 
 import javax.inject.Inject;
@@ -19,6 +21,7 @@ public class DetailPresenter extends BasePresenter<DetailView> {
     }
 
     @Override
-    public void attachView(DetailMvpView mvpView) {
+    public void attachView(DetailView mvpView) {
         super.attachView(mvpView);
     }
+}

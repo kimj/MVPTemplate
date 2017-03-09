@@ -31,7 +31,7 @@ dependencies {
     final leakCanary = "1.5"
     final butterKnife = "8.2.1"
 
-    final retrofit2 = "2.1.0"
+    final retrofit2 = "2.2.0"
     final okHttp = "3.6.0"
     final rxAndroid = "2.0.1"
     final rxJava2 = "2.0.5"

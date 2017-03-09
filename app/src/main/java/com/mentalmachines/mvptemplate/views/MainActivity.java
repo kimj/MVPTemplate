@@ -18,6 +18,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.mentalmachines.mvptemplate.R;
 import com.mentalmachines.mvptemplate.views.base.BaseActivity;
 
 import java.util.ArrayList;
@@ -95,6 +96,11 @@ public class MainActivity extends BaseActivity {
                     add(R.id.container, new WeatherFragment(), WeatherFragment.TAG).
                     commit();
         }*/
+    }
+
+    @Override
+    public int getLayout() {
+        return 0;
     }
 
     @Override

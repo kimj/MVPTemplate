@@ -50,6 +50,7 @@ public class BasePresenter<T extends BaseView> implements Presenter<T> {
         mCompositeSubscription.add(subs);
     }
 
+
     private static class MvpViewNotAttachedException extends RuntimeException {
         MvpViewNotAttachedException() {
             super("Please call Presenter.attachView(MvpView) before" +

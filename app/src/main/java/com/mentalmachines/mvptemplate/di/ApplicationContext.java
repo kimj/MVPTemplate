@@ -1,4 +1,4 @@
-package in.mvpstarter.sample.injection;
+package com.mentalmachines.mvptemplate.di;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

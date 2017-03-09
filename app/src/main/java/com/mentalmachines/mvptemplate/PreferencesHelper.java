@@ -3,10 +3,10 @@ package in.mvpstarter.sample.data.local;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.mentalmachines.mvptemplate.di.ApplicationContext;
+
 import javax.inject.Inject;
 import javax.inject.Singleton;
-
-import in.mvpstarter.sample.injection.ApplicationContext;
 
 
 @Singleton

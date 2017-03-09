@@ -1,6 +1,7 @@
 package com.mentalmachines.mvptemplate.views.detail;
 
 import com.mentalmachines.mvptemplate.di.ConfigPersistent;
+import com.mentalmachines.mvptemplate.model.DataManager;
 import com.mentalmachines.mvptemplate.presenter.BasePresenter;
 
 import javax.inject.Inject;

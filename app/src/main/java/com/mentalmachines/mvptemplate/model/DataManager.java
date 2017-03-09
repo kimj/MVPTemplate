@@ -5,8 +5,6 @@ import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
-import in.mvpstarter.sample.data.model.Pokemon;
-import in.mvpstarter.sample.data.remote.MvpStarterService;
 import io.reactivex.Single;
 
 @Singleton

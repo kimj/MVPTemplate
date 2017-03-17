@@ -8,11 +8,11 @@ import com.mentalmachines.mvptemplate.services.OpenWeatherMapService;
 /**
  * Created by CaptofOuterSpace on 8/22/2016.
  */
-public class Presenter implements PresenterInterface {
+public class WeatherPresenter extends BasePresenter implements PresenterInterface {
     WeatherFragment mView;
     OpenWeatherMapService mOpenWeatherMapService;
 
-    public Presenter(WeatherFragment weatherFragment) {
+    public WeatherPresenter(WeatherFragment weatherFragment) {
         mView = weatherFragment;
         mOpenWeatherMapService = new OpenWeatherMapService();
     }

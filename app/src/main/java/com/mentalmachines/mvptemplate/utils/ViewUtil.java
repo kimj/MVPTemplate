@@ -1,4 +1,4 @@
-package in.mvpstarter.sample.util;
+package com.mentalmachines.mvptemplate.utils;
 
 import android.app.Activity;
 import android.content.Context;

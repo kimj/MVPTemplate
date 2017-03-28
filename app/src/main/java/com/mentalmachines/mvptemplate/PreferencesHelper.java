@@ -1,4 +1,4 @@
-package in.mvpstarter.sample.data.local;
+package com.mentalmachines.mvptemplate;
 
 import android.content.Context;
 import android.content.SharedPreferences;

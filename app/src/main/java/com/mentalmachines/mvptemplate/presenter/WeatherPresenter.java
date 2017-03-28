@@ -2,13 +2,14 @@ package com.mentalmachines.mvptemplate.presenter;
 
 import android.location.Location;
 
+import com.mentalmachines.mvptemplate.presenter.interfaces.BasePresenterInterface;
 import com.mentalmachines.mvptemplate.views.WeatherFragment;
 import com.mentalmachines.mvptemplate.services.OpenWeatherMapService;
 
 /**
  * Created by CaptofOuterSpace on 8/22/2016.
  */
-public class WeatherPresenter extends BasePresenter implements PresenterInterface {
+public class WeatherPresenter extends BasePresenter implements BasePresenterInterface {
     WeatherFragment mView;
     OpenWeatherMapService mOpenWeatherMapService;
 

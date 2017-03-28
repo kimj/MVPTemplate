@@ -22,4 +22,9 @@ public class BaseRecyclerFragment extends BaseFragment {
 
         return super.onCreateView(inflater, container, savedInstanceState);
     }
+
+    @Override
+    public int getLayout() {
+        return 0;
+    }
 }

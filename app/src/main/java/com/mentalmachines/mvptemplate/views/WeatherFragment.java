@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.mentalmachines.mvptemplate.R;
-import com.mentalmachines.mvptemplate.presenter.Presenter;
+import com.mentalmachines.mvptemplate.presenter.WeatherPresenter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -17,9 +17,9 @@ import butterknife.ButterKnife;
 /**
  * Created by CaptofOuterSpace on 8/22/2016.
  */
-public class WeatherFragment extends Fragment implements Presenter.View{
+public class WeatherFragment extends Fragment implements WeatherPresenter {
     public static String TAG = "WeatherFragment";
-    Presenter mPresenter;
+    WeatherPresenter mPresenter;
 
     @BindView(R.id.textViewLocation) TextView textViewLocation;
     @BindView(R.id.textViewWeatherDescription) TextView textViewWeatherDescription;
@@ -32,7 +32,7 @@ public class WeatherFragment extends Fragment implements Presenter.View{
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mPresenter = new Presenter(this);
+        mPresenter = new WeatherPresenter(this);
         mPresenter.getCurrentWeather();
     }
 
@@ -55,14 +55,14 @@ public class WeatherFragment extends Fragment implements Presenter.View{
     }
 
     @Override
-    public void updateCurrentWeatherViews(CurrentWeather currentWeather){
-        textViewLocation.setText(currentWeather.name +
+    public void updateCurrentWeatherViews() {
+/*        textViewLocation.setText(currentWeather.name +
                 currentWeather.sys.country + "(" +
                 currentWeather.coord.lat + "," + currentWeather.coord.lon + ")");
         textViewWeatherDescription.setText(currentWeather.weather.get(0).description);
         textViewWeatherTemperature.setText(currentWeather.main.tempMax + "/" + currentWeather.main.tempMin);
         textViewWeatherPressure.setText(currentWeather.main.pressure);
         textViewWeatherHumidity.setText(currentWeather.main.humidity);
-        textViewWeatherWind.setText(currentWeather.wind.deg + " deg " + currentWeather.wind.speed);
+        textViewWeatherWind.setText(currentWeather.wind.deg + " deg " + currentWeather.wind.speed);*/
     }
 }

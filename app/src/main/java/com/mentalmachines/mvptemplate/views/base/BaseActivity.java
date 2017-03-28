@@ -1,21 +1,18 @@
 package com.mentalmachines.mvptemplate.views.base;
 
 import android.os.Bundle;
-import android.support.v4.view.GravityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 import com.mentalmachines.mvptemplate.MVPTemplateApplication;
 import com.mentalmachines.mvptemplate.di.component.ActivityComponent;
 import com.mentalmachines.mvptemplate.di.component.ConfigPersistentComponent;
+import com.mentalmachines.mvptemplate.di.component.DaggerConfigPersistentComponent;
 import com.mentalmachines.mvptemplate.di.module.ActivityModule;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
-
-import com.mentalmachines.mvptemplate.di.component.ActivityComponent;
-import com.mentalmachines.mvptemplate.di.module.ActivityModule;
 
 import butterknife.ButterKnife;
 import timber.log.Timber;
@@ -24,7 +21,7 @@ import timber.log.Timber;
  * Created by jkim11 on 1/31/17.
  */
 
-public abstract class BaseActivity extends AppCompatActivity{
+public abstract class BaseActivity extends AppCompatActivity {
     private static final String KEY_ACTIVITY_ID = "KEY_ACTIVITY_ID";
     private static final AtomicLong NEXT_ID = new AtomicLong(0);
     private static final Map<Long, ConfigPersistentComponent> sComponentsArray = new HashMap<>();

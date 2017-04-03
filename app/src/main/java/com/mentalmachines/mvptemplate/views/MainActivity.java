@@ -27,7 +27,6 @@ import java.util.List;
 
 public class MainActivity extends BaseActivity {
     FloatingActionButton fab;
-    RecyclerView recycler;
     DrawerLayout navigationDrawer;
     ActionBarDrawerToggle drawerToggle;
     ListView drawerList;
@@ -41,7 +40,6 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.main_activity);
 
         fab = (FloatingActionButton) findViewById(R.id.fab);
-        recycler = (RecyclerView) findViewById(R.id.recycler);
 
         //get realm instance
         // this.realm = RealmController.with(this).getRealm();

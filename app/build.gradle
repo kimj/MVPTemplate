@@ -88,6 +88,7 @@ dependencies {
     compile "com.google.dagger:dagger:$dagger2"
     annotationProcessor "com.google.dagger:dagger-compiler:2.9"
     provided 'javax.annotation:jsr250-api:1.0'
+    provided 'org.glassfish:javax.annotation:10.0-b28'
 
     // MISC
     compile "com.jakewharton:butterknife:$butterKnife"

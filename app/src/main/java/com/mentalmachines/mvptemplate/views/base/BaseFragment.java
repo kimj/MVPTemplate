@@ -47,7 +47,7 @@ public abstract class BaseFragment extends Fragment {
         // being called after a configuration change.
         mFragmentId = savedInstanceState != null ?
                 savedInstanceState.getLong(KEY_FRAGMENT_ID) : NEXT_ID.getAndIncrement();
-        ConfigPersistentComponent configPersistentComponent;
+/*        ConfigPersistentComponent configPersistentComponent;
         if (sComponentsArray.get(mFragmentId) == null) {
             Timber.i("Creating new ConfigPersistentComponent id=%d", mFragmentId);
             configPersistentComponent = DaggerConfigPersistentComponent.builder()
@@ -59,7 +59,7 @@ public abstract class BaseFragment extends Fragment {
             Timber.i("Reusing ConfigPersistentComponent id=%d", mFragmentId);
             configPersistentComponent = sComponentsArray.get(mFragmentId);
         }
-        mFragmentComponent = configPersistentComponent.fragmentComponent(new FragmentModule(this));
+        mFragmentComponent = configPersistentComponent.fragmentComponent(new FragmentModule(this));*/
     }
 
     @Nullable

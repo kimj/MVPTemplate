@@ -24,7 +24,7 @@ import butterknife.BindView;
 
 import timber.log.Timber;
 
-public class DetailActivity extends BaseActivity implements DetailView, ErrorView.ErrorListener {
+public class DetailActivity extends BaseActivity implements DetailContract.View, ErrorView.ErrorListener {
 
     public static final String EXTRA_POKEMON_NAME = "EXTRA_POKEMON_NAME";
 
@@ -64,7 +64,6 @@ public class DetailActivity extends BaseActivity implements DetailView, ErrorVie
     public int getLayout() {
         return R.layout.activity_detail;
     }
-
 
     @Override
     public void showProgress(boolean show) {

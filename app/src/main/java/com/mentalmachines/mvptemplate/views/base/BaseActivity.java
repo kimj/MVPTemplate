@@ -40,7 +40,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         // being called after a configuration change.
         mActivityId = savedInstanceState != null ?
                 savedInstanceState.getLong(KEY_ACTIVITY_ID) : NEXT_ID.getAndIncrement();
-        ConfigPersistentComponent configPersistentComponent;
+/*        ConfigPersistentComponent configPersistentComponent;
         if (sComponentsArray.get(mActivityId) == null) {
             Timber.i("Creating new ConfigPersistentComponent id=%d", mActivityId);
             configPersistentComponent = DaggerConfigPersistentComponent.builder()
@@ -51,7 +51,7 @@ public abstract class BaseActivity extends AppCompatActivity {
             Timber.i("Reusing ConfigPersistentComponent id=%d", mActivityId);
             configPersistentComponent = sComponentsArray.get(mActivityId);
         }
-        mActivityComponent = configPersistentComponent.activityComponent(new ActivityModule(this));
+        mActivityComponent = configPersistentComponent.activityComponent(new ActivityModule(this));*/
         mActivityComponent.inject(this);
     }
 

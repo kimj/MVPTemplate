@@ -1,11 +1,8 @@
-package com.mentalmachines.mvptemplate.presenter;
+package com.mentalmachines.mvptemplate.views.base;
 
 /**
  * Created by jkim11 on 3/2/17.
  */
-
-import com.mentalmachines.mvptemplate.presenter.interfaces.BasePresenterInterface;
-import com.mentalmachines.mvptemplate.views.base.BaseView;
 
 import rx.Observable;
 import rx.Single;
@@ -17,7 +14,7 @@ import rx.subscriptions.CompositeSubscription;
  * attachView() and detachView(). It also handles keeping a reference to the mvpView that
  * can be accessed from the children classes by calling getMvpView().
  */
-public class BasePresenter<T extends BaseView> implements BasePresenterInterface {
+public class BasePresenter<T> implements BaseContract.Presenter<T>{
 
     private T mMvpView;
     private final CompositeSubscription mCompositeSubscription = new CompositeSubscription();
